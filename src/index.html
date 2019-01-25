@@ -15,14 +15,32 @@
 </header>
 
 <section>
-    <p>Please check the console to see the javascript results.</p>
+    <input id="number" placeholder="Enter an integer number between 0 and 1,000,000" size="40" type="text">
+    <input id="generate_button" type="button" value="Generate">
+    <p>The generated number is: <span id="random-number"></span></p>
+    <p id="error-message"></p>
+    <br>
+    <br>
+    <br>
 </section>
 
 <footer>
-    <p>Copyright 2019 Israel Roldan</p>
+    <p style="font-size: 8pt;">Copyright 2019 Israel Roldan</p>
 </footer>
 
 <script type="text/javascript">
+    let generate_button = document.getElementById("generate_button");
+
+    generate_button.onclick = function () {
+        let number = document.getElementById("number").value;
+        document.getElementById("error-message").innerText = "";
+
+        try {
+            document.getElementById("random-number").innerText = randomNumber(number);
+        } catch (e) {
+            document.getElementById("error-message").innerText = "Error: " + e.message;
+        }
+    }
 </script>
 
 </body>

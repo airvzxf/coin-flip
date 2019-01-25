@@ -30,8 +30,5 @@ function randomNumber(n) {
         }
     }
 
-    console.log(parseInt(new_binary_number, 2));
     return parseInt(new_binary_number, 2);
 }
-
-randomNumber(16);
