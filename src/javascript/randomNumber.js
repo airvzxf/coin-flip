@@ -1,15 +1,3 @@
-function flip() {
-    return Math.random() >= 0.5;
-}
-
-function generateBinaryNumber() {
-    return (flip()) ? 0 : 1;
-}
-
-function getBinaryZeroFilled(number, size) {
-    return number.padStart(size, '0');
-}
-
 function randomNumber(n) {
     if (n < 0 || n > 1000000) {
         throw new Error("The number should be between 0 and 1,000,000.");
@@ -32,3 +20,6 @@ function randomNumber(n) {
 
     return parseInt(new_binary_number, 2);
 }
+
+// TODO: Uncomment to run the unit test.
+// module.exports = randomNumber;
